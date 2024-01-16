@@ -132,6 +132,19 @@ img {
 #section .slideOuter .slideInner ul.slick-dots li.slick-active button {
   background: rgba(255, 255, 255, 1);
 }
+/* 슬라이드 자동재생 멈춤 버튼 코드 시작 */
+#section .slideOuter {
+  position: relative;
+}
+#section .slideOuter .plapau {
+  position: absolute;
+  bottom: 48px;
+  left: 50%;
+  font-size: 15px;
+  color: #fff;
+  margin-left: 50px;
+}
+/*========================================*/
 #section .slide {
   position: relative;
   height: 100vh;
@@ -161,9 +174,19 @@ img {
   font-size: 35px;
   font-weight: bold;
   margin: 0 0 25px;
+  opacity: 0;
+  transform: translate(0, 100% 0);
+}
+#section .slick-current.slick-active.slide .text p {
+  animation: fadeInUp 1s 1 both 0.3s;
 }
 #section .slide .text h2 {
   font-size: 18px;
+  opacity: 0;
+  transform: translate(0, 100% 0);
+}
+#section .slick-current.slick-active.slide .text h2 {
+  animation: fadeInUp 1s 1 both 1.3s;
 }
 #section .aboutUs {
   overflow: hidden;
