@@ -7,6 +7,11 @@
   box-sizing: border-box;
   font-family: "Noto Sans KR", sans-serif;
 }
+.blind {
+  position: absolute;
+  left: -9999px;
+  overflow: hidden;
+}
 ul {
   list-style: none;
 }
@@ -22,73 +27,63 @@ a {
 .row {
   max-width: 1220px;
   margin: 0 auto;
-  height: inherit;
 }
 img {
   max-width: 100%;
   vertical-align: middle;
 }
 #header {
-  border: 0px solid #000;
   background: #fff;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 99;
 }
-#header h1 {
+#header .row h1 {
   float: left;
-  border: 0px solid #000;
-  padding: 20px;
+
+  padding: 10px 0;
 }
-#header #nav {
+#header .row .menuopen {
+  display: none;
+}
+#header .row #nav {
   float: right;
 }
-#header #nav .depth1 > li {
+#header .row #nav ul.depth1 > li {
   float: left;
-  font-size: 17px;
-  color: #333;
   font-family: "Noto Sans KR" sans-serif;
   font-weight: 900;
   position: relative;
   font-weight: middle;
+  margin-left: 12px;
 }
-#header #nav .depth1 > li > a {
-  height: 105px;
-  line-height: 105px;
+#header .row #nav ul.depth1 > li > a {
+  font-size: 17px;
+  font-weight: bold;
+  padding: 0px 22px;
   display: block;
-  padding: 0 30px;
-  position: relative;
+  color: #333;
+  height: 85px;
+  line-height: 85px;
 }
-#header #nav .depth1 > li > a:hover {
-  background: #fff;
-}
-#header #nav .depth1 > li:hover .depth2 {
-  display: block;
-}
-#header #nav .depth2 {
+#header .row #nav ul.depth2 {
+  display: none;
   position: absolute;
   top: 100%;
-  left: 0;
   width: 100%;
-  background: #fff;
-  color: #333;
-  font-size: 14px;
-  font-weight: 400;
-  display: none;
-  /* margin: 10px 30px; */
+  text-align: left;
+  z-index: 999;
 }
-#header #nav .depth2 > li > a {
+#header .row #nav ul.depth2 > li > a {
   display: block;
-  background: #fff;
-  padding: 10px 30px;
+  padding: 12px 0 12px 22px;
+  font-size: 14px;
+  font-weight: 600;
   border-bottom: 1px solid rgba(132, 132, 132, 0.15);
+  background-color: #fff;
+  color: #333;
+  transition: all 0.3s;
 }
-#header #nav .depth2 > li > a:hover {
-  background: #000;
+#header .row #nav ul.depth2 > li > a:hover {
+  background-color: #000;
   color: #fff;
-  transition: all 0.2s;
 }
 /*슬라이더 구역*/
 #section .slideOuter .slideInner {
@@ -145,23 +140,23 @@ img {
   margin-left: 50px;
 }
 /*========================================*/
-#section .slide {
+#section .slideOuter .slide {
   position: relative;
-  height: 100vh;
+  height: 60vw;
 }
-#section .slide1 {
+#section .slideOuter .slide1 {
   background: url(../image/main01.jpg) no-repeat center / cover;
 }
-#section .slide2 {
+#section .slideOuter .slide2 {
   background: url(../image/main02.jpg) no-repeat center / cover;
 }
-#section .slide3 {
+#section .slideOuter .slide3 {
   background: url(../image/main03.jpg) no-repeat center / cover;
 }
-#section .slide4 {
+#section .slideOuter .slide4 {
   background: url(../image/main04.jpg) no-repeat center / cover;
 }
-#section .slide .text {
+#section .slideOuter .slide .text {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -170,7 +165,7 @@ img {
   text-align: center;
   color: #fff;
 }
-#section .slide .text p {
+#section .slideOuter .slide .text p {
   font-size: 35px;
   font-weight: bold;
   margin: 0 0 25px;
@@ -302,7 +297,7 @@ img {
 }
 #section .BusinessArea p {
   font-size: 15px;
-  line-height: 2em;
+  /* line-height: 2em; */
   margin: 20px 0 80px;
 }
 #section .BusinessArea p span {
@@ -346,8 +341,8 @@ img {
   transform: scale(1.1);
 }
 #section .BestService {
-  background: url(../image/banner04.jpg) center / cover;
-  height: 580px;
+  background: url(../image/banner04.jpg) right center / cover;
+  height: 587px;
   text-align: center;
   padding-top: 100px;
   font-family: "Noto Sans KR" sans-serif;
@@ -419,11 +414,13 @@ img {
   background: #000;
   text-align: left;
 }
+#footer {
+  margin-top: 50px;
+  padding-top: 50px;
+  border-top: 1px solid #222;
+}
 #footer .row {
   overflow: hidden;
-  padding: 50px 10px;
-  border-top: 1px solid #222;
-  position: relative;
 }
 #footer .btmlogo {
   float: left;
@@ -431,7 +428,6 @@ img {
 #footer .btmmenu {
   float: right;
   overflow: hidden;
-  margin-left: 100px;
 }
 #footer .btmmenu .companyinfo {
   float: left;
