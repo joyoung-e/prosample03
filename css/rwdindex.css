@@ -323,7 +323,7 @@
   #footer span {
     display: block;
   }
-  #footer span .slach {
+  #footer span.slash { 
     display: none;
   }
 }
