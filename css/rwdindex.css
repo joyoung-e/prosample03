@@ -304,26 +304,20 @@
     float: left;
     width: 100%;
   }
-  #footer .btmmenu {
-    float: right;
-    width: 100%;
-  }
   #footer .btmmenu .companyinfo {
-    float: left;
+    float: right;
     width: 100%;
     margin: 20px 0;
   }
   #footer .btmmenu .sns {
     float: right;
     width: 100%;
-  }
-  #footer .btmmenu .sns a {
-    padding-right: 15px;
+    margin-top: -30px;
   }
   #footer span {
     display: block;
   }
-  #footer span.slash { 
+  #footer span.slash {
     display: none;
   }
 }

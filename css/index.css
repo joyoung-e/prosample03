@@ -426,14 +426,10 @@ img {
   float: left;
 }
 #footer .btmmenu {
-  float: right;
-  overflow: hidden;
+  float: left;
 }
 #footer .btmmenu .companyinfo {
-  float: left;
-  padding-right: 50px;
-}
-#footer .btmmenu .companyinfo a {
+  float: right;
   font-size: 14px;
   font-weight: bold;
   padding: 0 20px 50px 0;
@@ -445,7 +441,5 @@ img {
 #footer .btmmenu .sns {
   float: right;
   opacity: 50%;
-}
-#footer .btmmenu .sns a {
   padding-right: 15px;
 }
