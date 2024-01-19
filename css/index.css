@@ -416,30 +416,24 @@ img {
 }
 #footer {
   margin-top: 50px;
-  padding-top: 50px;
+  padding: 50px 0;
   border-top: 1px solid #222;
 }
 #footer .row {
   overflow: hidden;
 }
-#footer .btmlogo {
+#footer .row .btmlogo {
   float: left;
 }
-#footer .btmmenu {
-  float: left;
+#footer .row .btmmenu {
+  float: right;
 }
-#footer .btmmenu .companyinfo {
+#footer .row .btmmenu .companyinfo {
   float: right;
   font-size: 14px;
   font-weight: bold;
-  padding: 0 20px 50px 0;
 }
-#footer .btmmenu .addr {
-  font-size: 13px;
-  padding-top: 30px;
-}
-#footer .btmmenu .sns {
+#footer .btmmenu .companyinfo .sns {
   float: right;
   opacity: 50%;
-  padding-right: 15px;
 }
